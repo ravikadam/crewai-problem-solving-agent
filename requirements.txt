@@ -30,9 +30,3 @@ requests
 
 # Data Processing
 pandas
-
-# Vector Database
-chromadb
-
-# Database (Enhanced SQLite)
-pysqlite3
