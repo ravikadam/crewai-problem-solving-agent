@@ -30,3 +30,6 @@ requests
 
 # Data Processing
 pandas
+
+# Vector Database
+chromadb
