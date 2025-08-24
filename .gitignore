@@ -1,0 +1,14 @@
+# Environment and credentials
+.env
+
+# Python cache
+__pycache__/
+
+# System files
+.DS_Store
+
+# Project-specific files
+crewproj.json
+
+# Output directory - gets created when user generates content
+output/

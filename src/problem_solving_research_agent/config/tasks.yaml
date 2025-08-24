@@ -1,0 +1,43 @@
+---
+research_problem_and_create_solution_approach:
+  description: 'Research the given problem statement: "{problem_statement}" using
+    comprehensive web search. Analyze the problem thoroughly, identify key challenges,
+    and gather relevant information from multiple sources. Based on your research,
+    create a detailed step-by-step solution approach. If the problem involves Agentic
+    AI or automation, prioritize CrewAI framework solutions and provide specific implementation
+    guidance.'
+  expected_output: |-
+    A comprehensive solution document in markdown format that includes:
+    1. Problem Analysis - Clear breakdown of the problem and its key components
+    2. Research Summary - Key findings from web research with relevant sources
+    3. Step-by-Step Solution Approach - Detailed implementation steps with clear actions
+    4. For Agentic AI problems: Specific CrewAI recommendations and framework guidance
+    5. Additional Resources - Links and references for further reading
+
+    The solution should be actionable, well-structured, and include specific recommendations tailored to the problem statement.
+  agent: problem_solving_research_specialist
+publish_solution_as_document:
+  description: |-
+    Take the research and solution approach document created for "{problem_statement}" and complete a two-step process:
+
+    STEP 1: Format into a professional, polished document with proper structure, clear sections, and comprehensive content.
+
+    STEP 2: Once the document is perfectly formatted, create a Google Doc with the content using the Google Docs Creator tool. Use a descriptive title based on the problem statement.
+
+    The document should be fully prepared and polished before creating the Google Doc.
+  expected_output: "A complete two-step delivery:\n\n**STEP 1 - Formatted Document:**\nA
+    professionally formatted document containing:\n1. **Executive Summary** - Problem
+    overview and solution highlight\n2. **Problem Analysis** - Detailed research breakdown
+    \ \n3. **Step-by-Step Solution** - Clear implementation guide with numbered steps\n4.
+    **Technical Recommendations** - Specific tools and approaches (CrewAI for AI problems)\n5.
+    **Implementation Timeline** - Suggested phases and milestones\n6. **Resources
+    & References** - Links and additional materials\n7. **Next Steps** - Actionable
+    items to begin implementation\n\n**STEP 2 - Google Docs Creation:**\nAfter the document
+    is fully formatted and ready:\n- Create a Google Doc with the complete content\n-
+    Generate a clean, descriptive title based on the problem statement\n- Provide
+    Google Docs URL for easy access and sharing\n- Include document ID for reference
+    \n\nThe final result should be both a polished document ready
+    for immediate use AND a Google Doc that can be easily shared and collaborated on."
+  agent: document_publisher
+  context:
+  - research_problem_and_create_solution_approach
