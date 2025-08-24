@@ -33,3 +33,6 @@ pandas
 
 # Vector Database
 chromadb
+
+# Database (Enhanced SQLite)
+pysqlite3
