@@ -30,6 +30,3 @@ requests
 
 # Data Processing
 pandas
-
-# Database
-sqlite3
