@@ -30,3 +30,6 @@ requests>=2.31.0
 
 # Data Processing
 pandas>=2.0.0
+
+# Database
+sqlite3>=3.35.0
