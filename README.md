@@ -24,8 +24,8 @@ A powerful AI-driven research and problem-solving system built with CrewAI frame
 
 ### 1. Clone and Install
 ```bash
-git clone <your-repo-url>
-cd crewprob
+git clone https://github.com/ravikadam/crewai-problem-solving-agent.git
+cd crewai-problem-solving-agent
 pip install -r requirements.txt
 ```
 
@@ -99,7 +99,7 @@ PYTHONPATH=src python src/problem_solving_research_agent/main.py run
 ## 📁 Project Structure
 
 ```
-crewprob/
+crewai-problem-solving-agent/
 ├── src/problem_solving_research_agent/
 │   ├── main.py                 # CLI entry point
 │   ├── crew.py                 # CrewAI agents configuration
@@ -110,6 +110,7 @@ crewprob/
 │       ├── file_writer.py      # Local file creation
 │       └── google_docs.py      # Google Docs integration
 ├── streamlit_app.py            # Web UI application
+├── railway.json               # Railway deployment configuration
 ├── output/                     # Generated documents
 ├── requirements.txt            # All dependencies
 ├── .env_example               # Environment template (safe to commit)
@@ -156,6 +157,56 @@ streamlit run streamlit_app.py
 - ✅ **PDF generation**: Working in Streamlit UI
 - ⚠️ **Google Docs**: May require IAM permission propagation (60+ minutes)
 - ✅ **Fallback system**: Ensures no data loss
+
+## 🚀 Railway Deployment
+
+Deploy your CrewAI research agent to Railway.app for production hosting:
+
+### Prerequisites
+- GitHub account
+- Railway.app account (free $5 credit available)
+- Your environment variables ready
+
+### Deployment Steps
+
+1. **Fork/Clone Repository**
+   ```bash
+   git clone https://github.com/ravikadam/crewai-problem-solving-agent.git
+   ```
+
+2. **Sign up for Railway**
+   - Visit [Railway.app](https://railway.app)
+   - Sign up with your GitHub account
+   - Get $5 free trial credit
+
+3. **Deploy from GitHub**
+   - Click "New Project" on Railway dashboard
+   - Select "Deploy from GitHub repo"
+   - Configure GitHub App and select your repository
+   - Click "Deploy Now"
+
+4. **Configure Environment Variables**
+   - Go to your project settings in Railway
+   - Add environment variables from your `.env` file:
+     - `OPENAI_API_KEY`
+     - `SERPER_API_KEY` (optional)
+     - `GOOGLE_SERVICE_ACCOUNT_PATH` (optional)
+
+5. **Generate Domain**
+   - Go to Settings → Networking
+   - Click "Generate Domain" for a public URL
+   - Or configure custom domain
+
+### Railway Configuration
+The repository includes `railway.json` with optimized settings:
+- Streamlit runs on `0.0.0.0:$PORT`
+- File watcher disabled for production
+- Usage stats and toolbar minimized
+
+### Cost
+- **Free tier**: $5 credit (sufficient for testing)
+- **Production**: ~$5/month for small apps
+- **Scaling**: Automatic based on usage
 
 ## 🐛 Troubleshooting
 
